@@ -1,5 +1,6 @@
-# Web-Marking ![Project Type](http://funkyimg.com/i/2E2ou.jpg)
-
+![Project Type](http://funkyimg.com/i/2E2ou.jpg)
+- - -
+### Web-Marking
 **Project name:** *Mstore*
 - - -
 ## Folders
