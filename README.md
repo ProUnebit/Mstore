@@ -1,4 +1,4 @@
-![Project Type](http://funkyimg.com/i/2E2ou.jpg)
+![Project Type](https://markdown-here.com/img/icon256.png)
 - - -
 ### Web-Marking
 **Project name:** *Mstore*
