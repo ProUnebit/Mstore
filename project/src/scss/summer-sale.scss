@@ -1,0 +1,59 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.summer-sale {
+// |---PARAMS-LOC---|
+$title-color: $global-dark-turquoise;
+$percent-color: $global-dark-turquoise;
+$discover-color: $global-dark-jungle-green;
+
+// |---STYLES---|
+    &__block {
+        width: 270px;
+        height: 506px;
+        background: url('img/Bg_Adv.jpg') no-repeat;
+        background-size: cover;
+        transition: .1s linear;
+        &:hover {
+            filter: drop-shadow(5px -3px 5px $global-ash-grey);
+        }
+    }
+
+    &__info {
+        display: block;
+        width: inherit;
+        height: inherit;
+    }
+
+    &__title {
+        font-family: 'Open Sans', sans-serif;
+        color: $title-color;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    &__percent {
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        color: $percent-color;
+        font-size: 64px;
+        letter-spacing: -2.8px;
+        text-align: right;
+        line-height: 56px;
+        margin-right: 36px;
+    }
+
+    &__discover {
+        display: block;
+        color: $discover-color;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-align: center;
+        margin-top: -30px;
+    }
+}

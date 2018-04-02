@@ -1,0 +1,197 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.feauture-product {
+// |---PARAMS-LOC---|
+$main-title-color: $global-dark-jungle-green;
+$main-link-text-color: $global-dim-gray;
+$product-block-title: $global-davy-grey;
+$product-block-price-color: $global-dark-jungle-green;
+$product-block-empty-stars-color: $global-ash-grey;
+$product-block-filled-stars-color: $global-citrine;
+$product-block-label-hot-bg: $global-yellow;
+$product-block-label-hot-text-color: $global-red;
+$product-block-label-new-bg: $global-dark-turquoise;
+$product-block-label-new-text-color: $global-white;
+$product-block-label-sale-bg: $global-lust;
+$product-block-label-sale-text-color: $global-white;
+$product-block-hover-panel-bg: $global-white;
+$product-block-hover-panel-icons-color: $global-charcoal;
+
+// |---STYLES---|
+    margin-top: 30px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &__main-title {
+        position: relative;
+        width: 190px;
+        color: $main-title-color;
+        font-size: 24px;
+        font-weight: 500;
+        &::before {
+            position: absolute;
+            content: "";
+            border-bottom: 1px solid $main-title-color;
+            width: 30%;
+            top: 35px;
+            left: 0;
+        }
+    }
+
+    &__main-link {
+        align-self: center;
+        padding: 10px 0;
+        color: $main-link-text-color;
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        transition: .15s linear;
+        &:hover {
+            border-bottom: 1px solid lighten($main-link-text-color, 15%);
+            border-top: 1px solid lighten($main-link-text-color, 15%);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__block {
+        position: relative;
+        margin-bottom: 25px;
+        &:hover {
+            .feauture-product__hover-panel {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        height: 350px;
+        width: 270px;
+    }
+
+    &__hover-panel {
+        position: absolute;
+        z-index: 9;
+        @include flex-center(row);
+        opacity: 0;
+        top: 275px;
+        left: 0;
+        height: 40px;
+        width: 100%;
+        background-color: $product-block-hover-panel-bg;
+        color: lighten($product-block-hover-panel-icons-color, 5%);
+        transition: opacity, ease-out .2s;
+    }
+
+    &__basket {
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    &__fav {
+        @extend .feauture-product__basket;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    &__extension {
+        @extend .feauture-product__basket;
+    }
+
+    &__label-hot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 50px;
+        background-color: $product-block-label-hot-bg;
+        color: $product-block-label-hot-text-color;
+    }
+
+    &__label-new {
+        @extend .feauture-product__label-hot;
+        background-color: $product-block-label-new-bg;
+        color: $product-block-label-new-text-color;
+    }
+
+    &__label-sale {
+        @extend .feauture-product__label-hot;
+        background-color: $product-block-label-sale-bg;
+        color: $product-block-label-sale-text-color;
+    }
+
+    &__label-text {
+        writing-mode: tb-rl;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 14px;
+        padding-left: 4px;
+        letter-spacing: 0.4px;
+    }
+
+    &__info {
+        height: 50px;
+        margin-top: 15px;
+    }
+
+    &__name {
+        color: $product-block-title;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+    }
+
+    &__price-rating {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 3px 0;
+    }
+
+    &__price {
+        color: $product-block-price-color;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    &__price-sale {
+        &::after {
+            position: absolute;
+            content: "$65.00";
+            top: 5px;
+            color: $global-ash-grey;
+            font-size: 12px;
+            font-weight: 300;
+            text-align: left;
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+    }
+
+    &__rating {
+        color: $product-block-empty-stars-color;
+        font-size: 13px;
+        cursor: default;
+    }
+}

@@ -1,0 +1,130 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.footer {
+// |---PARAMS-LOC---|
+$main-bg: $global-charcoal-lighten;
+$info-block-bg: $global-charcoal;
+$info-block-text-color: $global-battleship-grey;
+$info-block-contact-name-text-color: $global-battleship-grey;
+$info-block-contact-value-text-color: $global-platinum;
+$info-block-social-icons-color: $global-white;
+$menu-block-title-color: $global-white;
+$menu-block-items-color: $global-pastel-gray;
+$map-block-map-bg: $global-charcoal;
+
+// |---STYLES---|
+    background-color: $main-bg;
+    border-bottom: 35px solid darken($info-block-bg, 2.5%);
+
+    &__content {
+        display: flex;
+    }
+
+    &__info {
+        max-width: 295px;
+        background-color: darken($info-block-bg, 2.5%);
+        padding: 50px 40px 45px 35px;
+    }
+
+    &__logo {
+        width: 92px;
+        height: 24px;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        color: $info-block-text-color;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        text-align: left;
+    }
+
+    &__contact {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+    }
+
+    &__contact-name {
+        color: $info-block-contact-name-text-color;
+    }
+
+    &__contact-value {
+        color: $info-block-contact-value-text-color;
+    }
+
+    &__social-icons {
+        font-size: 17px;
+        cursor: default;
+    }
+
+    &__social-icon {
+        color: $info-block-social-icons-color;
+        margin-right: 30px;
+        transition: .1s linear;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: lighten($global-charcoal-blue, 25%);
+        }
+    }
+
+    &__menu {
+        width: 400px;
+        padding: 60px 0 0 30px;
+    }
+
+    &__title {
+        color: $menu-block-title-color;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__nav {
+        @include clear-list;
+        display: flex;
+        flex-flow: column wrap;
+        align-content:  stretch;
+        height: 230px;
+        margin-top: 60px;
+    }
+
+    &__nav-item {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+        margin-bottom: 30px;
+        & a {
+            color: darken($menu-block-items-color, 10%);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__map {
+        width: 400px;
+        height: 280px;
+        border: 4px double $global-white;
+        margin-top: 90px;
+        background-color: $map-block-map-bg;
+        & > div {
+            width:400px;
+            height:280px;
+            overflow:hidden;
+            & #map {
+                width:400px;
+                height:280px;
+            }
+        }
+    }
+}

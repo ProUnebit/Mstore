@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mstore</title>
+    <link rel="stylesheet" href="master.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="header__top-bg">
+            <div class="header__top view-port">
+                <div class="header__phone-mail-panel">
+                    <span class="header__phone">(+84).898.058.000</span>
+                    <span class="header__mail">min101092@gmail.com</span>
+                </div>
+                <div class="header__language-currency-panel">
+                    <div class="header__language">language:
+                    <span class="header__language-value">eng</span>
+                        <ul class="select__dropdown">
+                            <li class="select__item">eng</li>
+                            <li class="select__item">fra</li>
+                            <li class="select__item">ger</li>
+                            <li class="select__item">ita</li>
+                            <li class="select__item">rus</li>
+                        </ul>
+                    </div>
+                    <div class="header__currency">currency:
+                        <span class="header__currency-value">usd</span>
+                        <ul class="select__dropdown">
+                            <li class="select__item">usd</li>
+                            <li class="select__item">eur</li>
+                            <li class="select__item">rub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom-bg">
+            <nav class="header__bottom view-port">
+                <img src="img/Logo-head.png" alt="mstore_logo" class="header__logo">
+                <ul class="header__nav">
+                    <li class="header__nav-item header__nav-item--home">
+                        <a href="#" class="header__nav-link">Home
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link header__nav-item--men">Men
+                            <span class="header__nav-border"></span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link header__nav-item--women">Women
+                            <span class="header__nav-border"></span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link header__nav-item--acces">Accessories
+                            <span class="header__nav-border"></span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link header__nav-item--lookbook">Lookbook
+                            <span class="header__nav-border"></span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item header__nav-item--contact">
+                        <a href="#" class="header__nav-link">Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="header__search-line">
+                    <input type="text" class="header__search-input" name="search" title="Search..." value="Search...">
+                    <a href="#" class="header__search-go"><i class="fas fa-arrow-circle-left"></i></a>
+                </div>
+                <div class="header__icons-panel">
+                    <i class="header__search fas fa-search"></i>
+                    <i class="header__login far fa-user-circle"></i>
+                    <i class="header__fav far fa-heart"></i>
+                    <i class="header__basket fas fa-shopping-basket"><span class="header__basket-value">0</span></i>
+                    <span class="header__basket-price">$0.00</span>
+                </div>
+            </nav>
+            <div class="header__hidden-menu-men">
+                <ul class="header__hidden-menu-nav view-port">
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Headdress</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">T-Shirt</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Shirt</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Sweatshirt</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Jacket</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Tie</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Jeans</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Trousers</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Shoes</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--turquoise">Underwear</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__hidden-menu-women">
+                <ul class="header__hidden-menu-nav view-port">
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Headdress</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Blouse</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Dress</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Sweatshirt</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Jacket</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Jeans</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Trousers</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Skirt</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Tights</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Shoes</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--lilac">Underwear</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__hidden-menu-acces">
+                <ul class="header__hidden-menu-nav view-port">
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Bag</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Belt</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Hairpin</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Cuff Link</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Scarf</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Bracelet</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Hairbrush</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Shoe Care</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--citrine">Perfume</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__hidden-menu-lookbook">
+                <ul class="header__hidden-menu-nav view-port">
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--red">Winter Season</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--red">Spring Season</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--red">Summer Season</a>
+                    </li>
+                    <li class="header__hidden-menu-nav-item">
+                        <a href="#" class="header__hidden-menu-nav-link header__hidden-menu-nav-link--red">Autumn Season</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-slider">
+        <img name="mainSlider">
+        <div class="main-slider__info-block view-port">
+            <div class="main-slider__quote">
+                <h4 class="main-slider__subtitle">We make it easy to exprience creativity</h4>
+                <h2 class="main-slider__title">Stylish new design.</h2>
+                <p class="main-slider__description">Order online and have your products delivered to your closest store for free...</p>
+            </div>
+            <a href="#" class="main-slider__link">Shopping now</a>
+        </div>
+    </section>
+
+    <section class="shipping-info view-port">
+        <div class="shipping-info__block">
+            <div class="shipping-info__icon icon-1"></div>
+            <div class="shipping-info__text-block">
+                <h4 class="shipping-info__title">Free shippng</h4>
+                <h5 class="shipping-info__subtitle">Free shipping for all US order</h5>
+            </div>
+        </div>
+        <div class="shipping-info__block">
+            <div class="shipping-info__icon icon-2"></div>
+            <div class="shipping-info__text-block">
+                <h4 class="shipping-info__title">Support 24/7</h4>
+                <h5 class="shipping-info__subtitle">We support 24 hours a day</h5>
+            </div>
+        </div>
+        <div class="shipping-info__block">
+            <div class="shipping-info__icon icon-3"></div>
+            <div class="shipping-info__text-block">
+                <h4 class="shipping-info__title">30 day return</h4>
+                <h5 class="shipping-info__subtitle">You have 30 days to return</h5>
+            </div>
+        </div>
+        <div class="shipping-info__block">
+            <div class="shipping-info__icon icon-4"></div>
+            <div class="shipping-info__text-block">
+                <h4 class="shipping-info__title">Payment 100% secured</h4>
+                <h5 class="shipping-info__subtitle">Payment 100% secured</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="gender-offer view-port">
+        <div class="gender-offer__block">
+            <div class="gender-offer__info gender-offer__info--aside">
+                <h4 class="gender-offer__subtitle">New arrivals</h4>
+                <h3 class="gender-offer__title">Shirt for boy's</h3>
+                <span class="gender-offer__price">$99.00</span>
+                <p class="gender-offer__text">Refresh your wardrobe with a piece from our gorgeous ready-to-wear collection, featuring beautifully crafted coats, dresses, jackets, sweaters, skirts, tops and trousers. Whether you’re searching for a special occasion...</p>
+                <a href="#" class="gender-offer__link gender-offer__link--aside">Shopping now</a>
+            </div>
+        </div>
+        <div class="gender-offer__block">
+            <div class="gender-offer__info gender-offer__info--bside">
+                <h4 class="gender-offer__subtitle">New arrivals</h4>
+                <h3 class="gender-offer__title">Shirt for girl's</h3>
+                <span class="gender-offer__price">$99.00</span>
+                <p class="gender-offer__text">Refresh your wardrobe with a piece from our gorgeous ready-to-wear collection, featuring beautifully crafted coats, dresses, jackets, sweaters, skirts, tops and trousers. Whether you’re searching for a special occasion...</p>
+                <a href="#" class="gender-offer__link gender-offer__link--bside">Shopping now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-items-offer view-port">
+        <div class="new-items-offer__bg">
+            <div class="new-items-offer__info">
+                <h4 class="new-items-offer__subtitle">New item's</h4>
+                <h3 class="new-items-offer__title">Shoes collection</h3>
+                <p class="new-items-offer__text">We are delighted to reveal our campaign for the Autumn/Winter 2017 collection, styled by fashion icon Caroline Issa and shot by esteemed photographer www.minsoi.com...</p>
+                <a href="#" class="new-items-offer__link">Shopping now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="feauture-product">
+        <div class="feauture-product__content view-port">
+            <div class="feauture-product__header">
+                <h3 class="feauture-product__main-title">Feauture Product</h3>
+                <a href="#" class="feauture-product__main-link">All product</a>
+            </div>
+            <div class="feauture-product__body">
+                <div class="feauture-product__block">
+                    <img src="img/P_1.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Abominable Hoodie</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$40.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_2.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__label-hot">
+                        <h5 class="feauture-product__label-text">Hot</h5>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Hollister Backyard Sweatshirt</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$29.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_3.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Oslo Trek Hoodie</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$29.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_4.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__label-new">
+                        <h5 class="feauture-product__label-text">New</h5>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Mach Street Sweatshirt</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$40.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_5.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__label-sale">
+                        <h5 class="feauture-product__label-text">Sale</h5>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Backyard Sweat Shirt</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price feauture-product__price-sale">$40.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_6.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Faded Short Sleeves</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$110.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_7.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Oslo Trek Hoodie</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$80.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feauture-product__block">
+                    <img src="img/P_8.jpg" class="feauture-product__img">
+                    <div class="feauture-product__hover-panel">
+                        <i class="feauture-product__basket fas fa-shopping-basket"></i>
+                        <i class="feauture-product__fav far fa-heart"></i>
+                        <i class="feauture-product__extension fas fa-search-plus"></i>
+                    </div>
+                    <div class="feauture-product__info">
+                        <h5 class="feauture-product__name">Leather Sneakers</h5>
+                        <div class="feauture-product__price-rating">
+                            <span class="feauture-product__price">$80.00</span>
+                            <div class="feauture-product__rating">
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="filled-stars fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sale-shoes-offer">
+        <div class="sale-shoes-offer__content view-port">
+            <a href="#" class="sale-shoes-offer__info">
+                <h4 class="sale-shoes-offer__title">Sport shoes collection</h4>
+                <span class="sale-shoes-offer__subtitle-one">Entire shoes purchase</span>
+                <h2 class="sale-shoes-offer__subtitle-two">Save up to $70</h2>
+                <p href="#" class="sale-shoes-offer__desk">Click here see all the shoes collection...</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="about-store">
+        <figure class="about-store__content view-port">
+            <figcaption class="about-store__info">
+                <h3 class="about-store__title">We love mstore</h3>
+                <p class="about-store__text">A professional-looking tote for your everyday needs! This Wilsons Leather tote has a canvas look with genuine leather trim and a structured silhouette. Its shiny gold-tone hardware and two-tone design give it extra fashionable flair.</p>
+                <a href="#" class="about-store__link">Discover</a>
+            </figcaption>
+            <img name="aboutStoreSlider" class="about-store__img about-store__slide-animate">
+        </figure>
+    </section>
+
+    <section class="best-product-summer-sale view-port">
+        <section class="best-product">
+            <div class="best-product__content">
+                <div class="best-product__header">
+                    <h3 class="best-product__main-title">Best Sellers Product</h3>
+                    <a href="" class="best-product__main-link">All product</a>
+                </div>
+                <div class="best-product__body">
+                    <div class="best-product__block">
+                        <img src="img/P_8.jpg" class="best-product__img">
+                        <div class="best-product__hover-panel">
+                            <i class="best-product__basket fas fa-shopping-basket"></i>
+                            <i class="best-product__fav far fa-heart"></i>
+                            <i class="best-product__extension fas fa-search-plus"></i>
+                        </div>
+                        <div class="best-product__info">
+                            <h5 class="best-product__name">Leather Sneakers</h5>
+                            <div class="best-product__price-rating">
+                                <span class="best-product__price">$80.00</span>
+                                <div class="best-product__rating">
+                                    <i class="filled-stars fas fa-star"></i>
+                                    <i class="filled-stars fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="best-product__block">
+                        <img src="img/P_2.jpg" class="best-product__img">
+                        <div class="best-product__hover-panel">
+                            <i class="best-product__basket fas fa-shopping-basket"></i>
+                            <i class="best-product__fav far fa-heart"></i>
+                            <i class="best-product__extension fas fa-search-plus"></i>
+                        </div>
+                        <div class="best-product__info">
+                            <h5 class="best-product__name">Hollister Backyard Sweatshirt</h5>
+                            <div class="best-product__price-rating">
+                                <span class="best-product__price">$29.00</span>
+                                <div class="best-product__rating">
+                                    <i class="filled-stars fas fa-star"></i>
+                                    <i class="filled-stars fas fa-star"></i>
+                                    <i class="filled-stars fas fa-star"></i>
+                                    <i class="filled-stars fas fa-star"></i>
+                                    <i class="filled-stars fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="best-product__block">
+                        <img src="img/P_3.jpg" class="best-product__img">
+                        <div class="best-product__hover-panel">
+                            <i class="best-product__basket fas fa-shopping-basket"></i>
+                            <i class="best-product__fav far fa-heart"></i>
+                            <i class="best-product__extension fas fa-search-plus"></i>
+                        </div>
+                        <div class="best-product__info">
+                            <h5 class="best-product__name">Oslo Trek Hoodie</h5>
+                            <div class="best-product__price-rating">
+                                <span class="best-product__price">$29.00</span>
+                                <div class="best-product__rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="summer-sale">
+            <div class="summer-sale__block">
+                <a href="#" class="summer-sale__info">
+                    <h3 class="summer-sale__title">Summer sale</h3>
+                    <span class="summer-sale__percent">20%</span>
+                    <span class="summer-sale__discover">Discover now</span>
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <section class="blog-post">
+        <div class="blog-post__content view-port">
+            <div class="blog-post__header">
+                <h3 class="blog-post__main-title">Blog Post's</h3>
+            </div>
+            <article class="blog-post__tiles">
+                <div class="blog-post__tile">
+                    <img src="img/Post_1.jpg" class="blog-post__img">
+                    <div class="blog-post__info">
+                        <h4 class="blog-post__title">Lorem Ipsum Dolor Sitamet 1</h4>
+                        <div class="blog-post__date-comments">
+                            <span class="blog-post__date">Feb - 23</span>
+                            <a href="#" class="blog-post__comments">9 comments</a>
+                        </div>
+                        <p class="blog-post__text-fragment">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</p>
+                    </div>
+                    <a href="#" class="blog-post__link">Read more</a>
+                </div>
+                <div class="blog-post__tile">
+                    <img src="img/Post_2.jpg" class="blog-post__img">
+                    <div class="blog-post__info">
+                        <h4 class="blog-post__title">Lorem Ipsum Dolor Sitamet 2</h4>
+                        <div class="blog-post__date-comments">
+                            <span class="blog-post__date">Mar - 15</span>
+                            <a href="#" class="blog-post__comments">5 comments</a>
+                        </div>
+                        <p class="blog-post__text-fragment">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</p>
+                    </div>
+                    <a href="#" class="blog-post__link">Read more</a>
+                </div>
+                <div class="blog-post__tile">
+                    <img src="img/Post_3.jpg" class="blog-post__img">
+                    <div class="blog-post__info">
+                        <h4 class="blog-post__title">Lorem Ipsum Dolor Sitamet 3</h4>
+                        <div class="blog-post__date-comments">
+                            <span class="blog-post__date">Apr - 1</span>
+                            <a href="#" class="blog-post__comments">6 comments</a>
+                        </div>
+                        <p class="blog-post__text-fragment">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,...</p>
+                    </div>
+                    <a href="#" class="blog-post__link">Read more</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="mail-subscription">
+        <form class="mail-subscription__form view-port">
+            <div class="mail-subscription__text">
+                <h3 class="mail-subscription__title">Join our email</h3>
+                <p class="mail-subscription__desc">We only send emails once a month and only about good things.</p>
+            </div>
+            <div class="mail-subscription__input-of-mail">
+                <input type="text" class="mail-subscription__input" name="mail" title="Your email..." value="Your email...">
+                <button type="submit" class="mail-subscription__submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__content view-port">
+            <div class="footer__info">
+                <img src="img/Logo-footer.png" alt="mstore_logo" class="footer__logo">
+                <p class="footer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <div class="footer__contact">
+                    <div class="footer__contact-name">Adress: <span class="footer__contact-value">Hanoi, Vietnamese.</span></div>
+                    <div class="footer__contact-name">Phone: <span class="footer__contact-value">(+084) 898.058.000</span></div>
+                    <div class="footer__contact-name">Mail: <span class="footer__contact-value">min101092@gmail.com</span></div>
+                </div>
+                <div class="footer__social-icons">
+                    <a href="https://www.facebook.com/" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" class="footer__social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="https://plus.google.com" class="footer__social-icon"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.behance.net/" class="footer__social-icon"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <h4 class="footer__title">Informations</h4>
+                <ul class="footer__nav">
+                    <li class="footer__nav-item"><a href="#">Privacy</a></li>
+                    <li class="footer__nav-item"><a href="#">Terms of Use</a></li>
+                    <li class="footer__nav-item"><a href="#">Copyright</a></li>
+                    <li class="footer__nav-item"><a href="#">Find Your Country</a></li>
+                    <li class="footer__nav-item"><a href="#">Site map</a></li>
+                    <li class="footer__nav-item"><a href="#">Odering info</a></li>
+                    <li class="footer__nav-item"><a href="#">Contatcs</a></li>
+                    <li class="footer__nav-item"><a href="#">Return info</a></li>
+                    <li class="footer__nav-item"><a href="#">Warrantly</a></li>
+                    <li class="footer__nav-item"><a href="#">Product Manual</a></li>
+                </ul>
+            </div>
+            <div class="footer__map">
+                <div>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+<script async defer src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwu3n6JCNtYWtXaGzbNIL6Zyc65WVoDSM&callback=initMap"></script>
+
+</body>
+</html>

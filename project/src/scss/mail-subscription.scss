@@ -1,0 +1,108 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.mail-subscription {
+// |---PARAMS-LOC---|
+$title-color: $global-white;
+$desc-text-color: $global-white;
+$input-text-color: $global-ash-grey;
+$input-bg: $global-white;
+$button-text-color: $global-white;
+$button-bg: $global-dark-turquoise;
+
+// |---STYLES---|
+    width: 100%;
+    height: 202px;
+    background: url('img/Sha.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+    }
+
+    &__text {
+    }
+
+    &__title {
+        color: $title-color;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+
+    &__desc {
+        color: transparentize($desc-text-color, 0.15);
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        padding-top: 8px;
+    }
+
+    &__input-of-mail {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        width: 650px;
+        height: 40px;
+        border: 0;
+        font-size: 14px;
+        font-weight: 300;
+        color: $input-text-color;
+        background-color: darken($input-bg, 5%);
+        padding-left: 20px;
+        transition: .1s linear;
+        &:focus {
+            outline: none;
+            background-color: $input-bg;
+            color: darken($input-text-color, 30%);
+        }
+    }
+
+    &__submit {
+        position: relative;
+        align-self: flex-end;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border: 0;
+        background-color: $button-bg;
+        color: $global-white;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        margin-top: 10px;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+        &:hover::after {
+            position: absolute;
+            content: "\f0d9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 10px;
+        }
+        &::after {
+            position: absolute;
+            content: "\f0da";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            bottom: 0;
+            margin-left: 9px;
+            transition: .25s ease;
+        }
+    }
+}

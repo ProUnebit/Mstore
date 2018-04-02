@@ -1,0 +1,101 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.about-store {
+// |---PARAMS-LOC---|
+$title-color: $global-charcoal;
+$paragraph-text-color: $global-charcoal;
+$link-text-color: $global-charcoal;
+$info-bg: #97DCCA;
+
+// |---STYLES---|
+    margin-bottom: 30px;
+
+    &__content {
+        display: flex;
+        background: $global-charcoal;
+    }
+
+    &__info {
+        @include flex-center;
+        background-color: $info-bg;
+        width: 50%;
+    }
+
+    &__title {
+        position: relative;
+        color: $title-color;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        &::after {
+            position: absolute;
+            z-index: 9;
+            content: "";
+            border-bottom: 2px solid $title-color;
+            width: 50px;
+            top: 50px;
+            left: 40%;
+        }
+    }
+
+    &__text {
+        color: $paragraph-text-color;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 36px;
+        width: 410px;
+    }
+
+    &__link {
+        position: relative;
+        color: $link-text-color;
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 25px;
+        &:hover::before {
+            position: absolute;
+            content: "\f0d9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            color: $link-text-color;
+            bottom: 15px;
+            margin-left: 72px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            font-size: 12px;
+            color: transparentize($link-text-color, .9);
+            bottom: 15px;
+            margin-left: -20px;
+            transition: .55s ease;
+        }
+    }
+
+    &__img {
+        height: 400px;
+        max-width: 585px;
+    }
+
+    &__slide-animate {
+        animation: opacity-go 6s ease-in-out infinite;
+        animation-delay: .6s;
+    }
+
+    @keyframes opacity-go {
+        0% {opacity: 0; margin: 0 75px;}
+        30% {margin: 0;}
+        60% {opacity: 1; margin: 0;}
+        90% {opacity: 1; margin: 0;}
+        98% {opacity: 0; margin: 0 75px;}
+        100% {opacity: 0; margin: 0 75px;}
+    }
+}

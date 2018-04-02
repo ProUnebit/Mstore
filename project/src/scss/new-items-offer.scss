@@ -1,0 +1,96 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.new-items-offer {
+// |---PARAMS-LOC---|
+$title-color: $global-dark-turquoise;
+$subtitle-color: $global-carrot-orange;
+$desc-text-color: $global-dim-gray;
+$link-text-color: $global-onyx;
+
+// |---STYLES---|
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__bg {
+        height: 260px;
+        width: 100%;
+        background: url("img/35.jpg") no-repeat;
+        background-size: cover;
+        transition: .5s linear;
+        &:hover {
+            background: url("img/3.jpg") no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__info {
+        height: 260px;
+        width: 580px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 70px;
+        cursor: default;
+    }
+
+    &__subtitle {
+        color: $subtitle-color;
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        line-height: 0.5;
+    }
+
+    &__title {
+        color: $title-color;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $global-dim-gray;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        position: relative;
+        width: 83px;
+        font-family: 'Roboto', sans-serif;
+        color: $link-text-color;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: -15px;
+        &:hover::before {
+            position: absolute;
+            content: "\f0d9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            color: $link-text-color;
+            bottom: 15px;
+            margin-left: 100px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            font-size: 12px;
+            color: transparentize($link-text-color, .9);
+            bottom: 15px;
+            margin-left: -20px;
+            transition: .5s ease;
+        }
+    }
+}

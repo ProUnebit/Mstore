@@ -1,0 +1,109 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.main-slider {
+// |---PARAMS-LOC---|
+$title-color: $global-charcoal-blue;
+$subtitle-color: $global-charcoal-blue;
+$description-color: $global-dark-jungle-green;
+$link-text-color: $global-onyx;
+
+// |---STYLES---|
+    @include flex-center;
+    height: 630px;
+    width: 100%;
+    overflow: hidden;
+    background-color: $global-charcoal;
+    transition: 2s linear;
+
+    & img[name="mainSlider"] {
+        filter: drop-shadow(8px -3px 3px #383838);
+    }
+
+    &__slide-animate {
+        animation: op-go 1.25s ease-in-out;
+    }
+
+    @keyframes op-go {
+        from {opacity: 0.75;}
+        to {opacity: 1;}
+    }
+
+    &__info-block {
+        position: absolute;
+        z-index: 99;
+    }
+
+    &__quote {
+        margin-left: 100px;
+        cursor: default;
+    }
+
+    &__subtitle {
+        font-family: 'Open Sans', sans-serif;
+        color: $subtitle-color;
+        text-shadow: 0.1em 0.1em 0.2em $subtitle-color;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-bottom: 20px;
+        transition: 1.5s linear;
+    }
+
+    &__title {
+        font-family: 'Open Sans Extrabold', sans-serif;
+        color: $title-color;
+        text-shadow: -.6px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+        width: 238px;
+        font-size: 72px;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        line-height: 72px;
+        margin-bottom: 24px;
+        transition: 1.5s linear;
+    }
+
+    &__description {
+        width: 515px;;
+        color: $description-color;
+        font-size: 15px;
+        font-weight: lighter;
+        font-style: italic;
+        margin-bottom: 26px;
+        transition: 1.5s all;
+    }
+
+    &__link {
+        position: relative;
+        margin-left: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: $link-text-color;
+        text-shadow: -.6px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        transition: 1.5s linear;
+        &:hover::after {
+            position: absolute;
+            content: "\f0d9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 14px;
+            bottom: 15.5px;
+            margin-left: 11px;
+        }
+        &::after {
+            position: absolute;
+            content: "\f0da";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 14px;
+            bottom: 15.5px;
+            margin-left: 10px;
+            transition: .25s ease;
+        }
+    }
+}

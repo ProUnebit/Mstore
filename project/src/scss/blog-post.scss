@@ -1,0 +1,150 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.blog-post {
+// |---PARAMS-LOC---|
+$main-title-color: $global-dark-jungle-green;
+$post-title-color: $global-dark-jungle-green;
+$date-comments-text-color: $global-dim-gray;
+$date-comments-icons-color: $global-dark-jungle-green;
+$text-fragment-color: $global-taupe-gray;
+$link-text-color: $global-onyx;
+
+// |---STYLES---|
+    margin-top: 40px;
+    margin-bottom: 35px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        margin-bottom: 25px;
+    }
+
+    &__main-title {
+        position: relative;
+        width: 125px;
+        color: $main-title-color;
+        font-size: 24px;
+        font-weight: 500;
+        &::before {
+            position: absolute;
+            content: "";
+            border-bottom: 1px solid $main-title-color;
+            width: 40%;
+            top: 35px;
+            left: 0;
+        }
+    }
+
+    &__tiles {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__tile {
+        width: 370px;
+        padding-bottom: 15px;
+    }
+
+    &__info {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        width: inherit;
+        height: 225px;
+    }
+
+    &__title {
+        color: $post-title-color;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+    }
+
+    &__date-comments {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    &__date {
+        position: relative;
+        color: $date-comments-text-color;
+        padding-left: 25px;
+        padding-right: 30px;
+        &::before {
+            position: absolute;
+            content: "\f073";
+            top: 0;
+            left: 0;
+            font-family: "Font Awesome 5 Free";
+            font-weight: regular;
+            font-size: 14px;
+            color: $date-comments-icons-color;
+        }
+    }
+
+    &__comments {
+        position: relative;
+        color: $date-comments-text-color;
+        padding-left: 25px;
+        &:hover {
+            text-decoration: underline;
+        }
+        &::before {
+            position: absolute;
+            content: "\f27a";
+            top: 0;
+            left: 0;
+            font-family: "Font Awesome 5 Free";
+            font-weight: regular;
+            font-size: 14px;
+            color: $date-comments-icons-color;
+        }
+    }
+
+    &__text-fragment {
+        width: 352px;
+        color: $text-fragment-color;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: left;
+        line-height: 20px;
+    }
+
+    &__link {
+        position: relative;
+        color: $link-text-color;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        &:hover::before {
+            position: absolute;
+            content: "\f0d9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            color: $link-text-color;
+            bottom: 16px;
+            margin-left: 88px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            font-size: 12px;
+            color: transparentize($link-text-color, .9);
+            bottom: 16px;
+            margin-left: -15px;
+            transition: .5s ease;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.gender-offer {
+// |---PARAMS-LOC---|
+$title-color: $global-dark-jungle-green;
+$aside-text-color: $global-carmine-red;
+$bside-text-color: $global-tiffany-blue;
+$desc-text-color: $global-dim-gray;
+$link-text-color: $global-onyx;
+
+// |---STYLES---|
+    display: flex;
+    justify-content: space-between;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 570px;
+        height: 400px;
+        background: url("img/2_1.jpg") no-repeat;
+        background-size: cover;
+        transition: .65s ease-in;
+        transition-delay: .35s;
+        &:hover {
+            filter: drop-shadow(-10px 10px 0px $global-citrine) drop-shadow(-10px 10px 0px $global-carrot-orange) drop-shadow(15px 0px 0px $global-carmine-red);
+        }
+    }
+
+    &__block:last-child {
+        background: url("img/2_2.jpg") no-repeat;
+        &:hover {
+            filter: drop-shadow(10px 10px 0px $global-citrine) drop-shadow(10px 10px 0px $global-carrot-orange) drop-shadow(-15px 0px 0px $global-tiffany-blue);
+        }
+    }
+
+    &__info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        cursor: default;
+
+    }
+
+    &__info--aside {
+        color: $aside-text-color;
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    &__info--bside {
+        color: $bside-text-color;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    &__subtitle {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        line-height: 0.2;
+    }
+
+    &__title {
+        font-family: 'Open Sans Extrabold', sans-serif;
+        color: $title-color;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__price {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: 'Open Sans', sans-serif;
+        max-width: 212px;
+        max-height: 130px;
+        color: $desc-text-color;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        margin-top: 22px;
+        margin-bottom: 18px;
+
+    }
+
+    &__link {
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        color: $link-text-color;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: -15px;
+    }
+
+    &__link--aside {
+        &:hover::after {
+            position: absolute;
+            content: "\f0da";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            color: $link-text-color;
+            bottom: 15px;
+            margin-left: -105px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            font-size: 12px;
+            color: transparentize($link-text-color, .9);
+            bottom: 15px;
+            margin-left: 15px;
+            transition: .5s ease;
+        }
+    }
+
+    &__link--bside {
+        &:hover::before {
+            position: absolute;
+            content: "\f0d9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 12px;
+            color: $link-text-color;
+            bottom: 15px;
+            margin-left: 100px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            font-size: 12px;
+            color: transparentize($link-text-color, .9);
+            bottom: 15px;
+            margin-left: -20px;
+            transition: .5s ease;
+        }
+    }
+}
