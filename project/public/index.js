@@ -88,6 +88,7 @@ function removeLookbookMenu(e) {
 // men
 headerNavMenItem.addEventListener('click', (e) => {
     // let target = e.target || e.srcElement;
+    document.removeEventListener('click', removeMenMenu);
     headerMenuMen.classList.toggle('header__visible-menu');
     headerNavMenItem.classList.toggle('header__nav-men-item-active');
 
@@ -95,6 +96,7 @@ headerNavMenItem.addEventListener('click', (e) => {
 });
 // women
 headerNavWomenItem.addEventListener('click', (e) => {
+    document.removeEventListener('click', removeWomenMenu);
     headerMenuWomen.classList.toggle('header__visible-menu');
     headerNavWomenItem.classList.toggle('header__nav-women-item-active');
 
@@ -102,6 +104,7 @@ headerNavWomenItem.addEventListener('click', (e) => {
 });
 // accessories
 headerNavAccesItem.addEventListener('click', (e) => {
+    document.removeEventListener('click', removeAccesMenu);
     headerMenuAcces.classList.toggle('header__visible-menu');
     headerNavAccesItem.classList.toggle('header__nav-acces-item-active');
 
@@ -109,6 +112,7 @@ headerNavAccesItem.addEventListener('click', (e) => {
 });
 // lookbook
 headerNavLookbookItem.addEventListener('click', (e) => {
+    document.removeEventListener('click', removeLookbookMenu);
     headerMenuLookbook.classList.toggle('header__visible-menu');
     headerNavLookbookItem.classList.toggle('header__nav-lookbook-item-active');
 
