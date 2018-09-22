@@ -1,4 +1,6 @@
 ![Project Type](https://image.ibb.co/ea1Gx7/readme_pic.jpg)
+
+![Project Type](stuff/Details.jpg)
 - - -
 ### Web-Marking
 **Project name:** *Mstore*
