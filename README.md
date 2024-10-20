@@ -7,7 +7,7 @@
 
 **Links:** 
 
-[https://mstore18.netlify.com](https://mstore18.netlify.com)
+[https://mstore18.netlify.com](https://mstore18.netlify.app)
 
 [https://prounebit.github.io/mstore/index.html](https://prounebit.github.io/mstore/index.html)
 - - -
